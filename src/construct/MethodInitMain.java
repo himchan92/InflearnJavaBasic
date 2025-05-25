@@ -5,22 +5,13 @@ import java.lang.reflect.Member;
 public class MethodInitMain {
 
     public static void main(String[] args) {
-        MemberInit m = new MemberInit();
-        initMember(m, "user1", 15, 90);
+        MemberInit2 m = new MemberInit2("user1", 10, 20);
+        MemberInit2 m2 = new MemberInit2("user2", 14, 99);
 
-        MemberInit m2 = new MemberInit();
-        initMember(m2, "user2", 25, 70);
+        MemberInit2[] members = {m, m2};
 
-        MemberInit[] members = {m, m2};
-
-        for(MemberInit s : members) {
+        for(MemberInit2 s : members) {
             System.out.println(s.name + ", " + s.age + ", " + s.grade);
         }
-    }
-
-    static void initMember(MemberInit member, String name, int age, int grade) {
-        member.name = name;
-        member.age = age;
-        member.grade = grade;
     }
 }
