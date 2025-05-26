@@ -21,5 +21,10 @@ public class StringBuilderMain {
 
         String str = sb.toString();
         System.out.println(str);
+
+        //한번에 참조하여 처리도 가능
+        String result = sb.append("final").append("test").insert(3, "one").reverse().toString();
+        System.out.println(result);
+
     }
 }
