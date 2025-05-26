@@ -1,5 +1,9 @@
 package enumeration;
 
+import static enumeration.Grade.BASIC;
+import static enumeration.Grade.DIAMOND;
+import static enumeration.Grade.GOLD;
+
 public class GradeEx1 {
 
     public static void main(String[] args) {
@@ -7,14 +11,12 @@ public class GradeEx1 {
         int price = 1000;
 
         DiscountService discountService = new DiscountService();
-        int basic = discountService.discount("BASIC", price);
-        int gold = discountService.discount("GOLD", price);
-        int diamond = discountService.discount("DIAMOND", price);
-        int vip = discountService.discount("VIP", price);
+        int basic = discountService.discount(BASIC, price);
+        int gold = discountService.discount(GOLD, price);
+        int diamond = discountService.discount(DIAMOND, price);
 
         System.out.println(basic);
         System.out.println(gold);
         System.out.println(diamond);
-        System.out.println(vip);
     }
 }

@@ -1,6 +1,6 @@
 package enumeration;
 
-public class DiscountService {
+public class DiscountService2 {
 
     public int discount(Grade grade, int price) {
         int percent = 0;
